@@ -249,7 +249,7 @@ function ADDTOANY_SHARE_SAVE_BUTTON( $args = array() ) {
 		}
 	}
 	
-	if( $button_text && (!$button_fname || $button_fname == 'favicon.png' || $button_fname == 'share_16_16.png') ) {
+	if( isset($button_text) && (!$button_fname || $button_fname == 'favicon.png' || $button_fname == 'share_16_16.png') ) {
 		$button			= $button_text;
 	} else {
 		$style = '';
