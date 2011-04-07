@@ -3,7 +3,7 @@ Contributors: micropat
 Tags: sharing, share, sharethis, bookmarking, social, social bookmarking, social bookmarks, bookmark, bookmarks, save, Post, posts, page, pages, images, image, admin, statistics, stats, links, plugin, widget, email, e-mail, seo, button, delicious, google buzz, buzz, google, digg, reddit, facebook, facebook like, like, myspace, twitter, tweet, messenger, stumbleupon, technorati, sexybookmarks, sociable, sharedaddy, icon, icons, wpmu, addtoany
 Requires at least: 2.8
 Tested up to: 3.1
-Stable tag: 0.9.9.7.10
+Stable tag: 0.9.9.7.11
 
 Help people share, bookmark, and email your posts & pages using any service, such as Facebook, Twitter, StumbleUpon, Digg and many more.
 
@@ -23,7 +23,7 @@ Standalone **share icons** let you optimize your blog posts for specific social 
 * Individual share links (like Sociable)
 * Includes all <a href="http://www.addtoany.com/services/" target="_blank">services</a>
 * Google Analytics integration (<a href="http://www.addtoany.com/ext/google_analytics/">access guide</a>)
-* WordPress optimized, localized (English, Chinese, Spanish, Japanese, French, Portuguese, Italian, Dutch, Danish, Catalan, Persian, Russian, Albanian, Romanian, Belarusian)
+* WordPress optimized, localized (English, Chinese, Spanish, Japanese, French, Portuguese, Italian, Dutch, Danish, Catalan, Persian, Russian, Turkish, Albanian, Romanian, Belarusian)
 * Easily customizable for beginners or advanced users, and highly extensible for developers and designers
 * Many more publisher and user features!
 
@@ -176,6 +176,10 @@ Please read <a href="http://www.addtoany.com/buttons/customize/show_over_embeds"
 5. Color chooser for your AddToAny menus
 
 == Changelog ==
+
+= .9.9.7.11 =
+* Turkish translation (by Fatih Aker)
+* Russian translation update (by <a href="http://fweb.org.ru/">Elvis</a>)
 
 = .9.9.7.10 =
 * Fix initial button text for 16px icons in admin
