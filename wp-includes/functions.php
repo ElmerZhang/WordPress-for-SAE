@@ -4490,4 +4490,12 @@ function wp_find_hierarchy_loop_tortoise_hare( $callback, $start, $override = ar
 	return false;
 }
 
+// for SAE
+if ( !function_exists('utf8_encode') ) {
+	function utf8_encode($str) {
+		$encoding_in = mb_detect_encoding($str);
+		return mb_convert_encoding($str, 'UTF-8', $encoding_in);
+	}
+}
+
 ?>
