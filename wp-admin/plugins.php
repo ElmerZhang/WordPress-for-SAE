@@ -2,6 +2,7 @@
 /**
  * Plugins administration panel.
  *
+ * @modified Elmer Zhang <freeboy6716@gmail.com>
  * @package WordPress
  * @subpackage Administration
  */
@@ -45,7 +46,7 @@ if ( $action ) {
 			$result = activate_plugin($plugin, self_admin_url('plugins.php?error=true&plugin=' . $plugin), $network_wide);
 			if ( is_wp_error( $result ) ) {
 				if ( 'unexpected_output' == $result->get_error_code() ) {
-					file_put_contents('saemc://plugin_error', $result->get_error_data()); //ezdebug
+					WP_DEBUG && file_put_contents('saemc://plugin_error', $result->get_error_data()); //ezdebug
 					$redirect = self_admin_url('plugins.php?error=true&charsout=' . strlen($result->get_error_data()) . '&plugin=' . $plugin . "&plugin_status=$status&paged=$page&s=$s");
 					wp_redirect(add_query_arg('_error_nonce', wp_create_nonce('plugin-activation-error_' . $plugin), $redirect));
 					exit;

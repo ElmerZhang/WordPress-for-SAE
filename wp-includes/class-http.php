@@ -7,6 +7,7 @@
  *
  * @link http://trac.wordpress.org/ticket/4779 HTTP API Proposal
  *
+ * @modified Elmer Zhang <freeboy6716@gmail.com>
  * @package WordPress
  * @modified Elmer Zhang <freeboy6716@gmail.com>
  * @subpackage HTTP
@@ -1444,7 +1445,6 @@ class WP_Http_Curl {
 			$theBody = '';
 		}
 
-//sae_debug(json_encode(curl_getinfo($handle))); //ezdebug
 		$response = array();
 		$response['code'] = curl_getinfo( $handle, CURLINFO_HTTP_CODE );
 		$response['message'] = get_status_header_desc($response['code']);

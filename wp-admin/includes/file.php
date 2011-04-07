@@ -2,6 +2,7 @@
 /**
  * File contains all the administration image manipulation functions.
  *
+ * @modified Elmer Zhang <freeboy6716@gmail.com>
  * @package WordPress
  * @subpackage Administration
  */
@@ -488,9 +489,9 @@ function wp_handle_sideload( &$file, $overrides = false ) {
 	}
 
 	// Set correct file permissions
-	$stat = stat( dirname( $new_file ));
-	$perms = $stat['mode'] & 0000666;
-	@ chmod( $new_file, $perms );
+	//$stat = stat( dirname( $new_file ));
+	//$perms = $stat['mode'] & 0000666;
+	//@ chmod( $new_file, $perms );
 
 	// Compute the URL
 	$url = $uploads['url'] . "/$filename";

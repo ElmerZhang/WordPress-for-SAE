@@ -5,6 +5,7 @@
  *
  * Allows for some configuration in wp-config.php (see default-constants.php)
  *
+ * @modified Elmer Zhang <freeboy6716@gmail.com>
  * @package WordPress
  */
 

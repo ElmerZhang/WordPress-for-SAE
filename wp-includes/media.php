@@ -2,6 +2,7 @@
 /**
  * WordPress API for media display.
  *
+ * @modified Elmer Zhang <freeboy6716@gmail.com>
  * @package WordPress
  */
 
