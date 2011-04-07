@@ -1050,12 +1050,7 @@ class wpdb {
 <p>如果您无法确定这些问题，请联系您的主机管理员。如果您仍需帮助，请访问 <a href=\'http://wordpress.org/support/\'>WordPress 支持论坛</a>。</p>
 '/*/WP_I18N_DB_CONN_ERROR*/, $this->dbhost ), 'db_connect_fail' );
 
-			// If show errors is disabled then we need to die anyway as we don't have a working DB connection
-			// unless we're trying to test the initial connection, in which case setup-config.php will handle.
-			if ( defined( 'WP_SETUP_CONFIG' ) )
-				return;
-
-			die();
+			return;
 		}
 
 		$this->set_charset( $this->dbh );

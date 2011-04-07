@@ -1,9 +1,15 @@
+# Chinese Simplified (zh_CN) translation for WordPress.
+# Copyright (C) 2011 WordPress contributors.
+# This file is distributed under the same license as the WordPress package.
+# Jiehan Zheng <zheng@jiehan.org>, 2011.
+#
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: WordPress 3.1 Cities\n"
 "Report-Msgid-Bugs-To: wp-polyglots@lists.automattic.com\n"
 "POT-Creation-Date: 2011-02-23 15:37:22+00:00\n"
-"PO-Revision-Date: \n"
+"PO-Revision-Date: 2011-04-05 12:20+0800\n"
 "Last-Translator: Jiehan Zheng <zheng@jiehan.org>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -865,7 +871,7 @@ msgstr "Rothera"
 
 #: wp-admin/includes/continents-cities.php:219
 msgid "South Pole"
-msgstr ""
+msgstr "South Pole"
 
 #: wp-admin/includes/continents-cities.php:220
 msgid "Syowa"
@@ -1962,4 +1968,3 @@ msgstr "Wallis"
 #: wp-admin/includes/continents-cities.php:493
 msgid "Yap"
 msgstr "Yap"
-

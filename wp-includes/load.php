@@ -107,7 +107,7 @@ function wp_check_php_mysql_versions() {
 		die( sprintf( /*WP_I18N_OLD_PHP*/'您的服务器现在运行的 PHP 版本为 %1$s 但 WordPress %2$s 要求的最低版本为 %3$s。'/*/WP_I18N_OLD_PHP*/, $php_version, $wp_version, $required_php_version ) );
 
 	if ( !extension_loaded( 'mysql' ) && !file_exists( WP_CONTENT_DIR . '/db.php' ) )
-		die( /*WP_I18N_OLD_MYSQL*/'您的 PHP 似乎没有安装运行 WordPress 必须的 MySQL 扩展。'/*/WP_I18N_OLD_MYSQL*/ );
+		die( /*WP_I18N_OLD_MYSQL*/'您的 PHP 似乎没有安装运行 WordPress 所必需的 MySQL 扩展。'/*/WP_I18N_OLD_MYSQL*/ );
 }
 
 /**
