@@ -100,7 +100,7 @@ define ('WPLANG', 'zh_CN');
  * 将这个值改为“true”，WordPress 将显示所有开发过程中的提示。
  * 强烈建议插件开发者在开发环境中启用本功能。
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* 好了！请不要再继续编辑。请保存该文件。 */
 

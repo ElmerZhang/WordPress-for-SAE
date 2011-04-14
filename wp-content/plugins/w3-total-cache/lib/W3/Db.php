@@ -165,8 +165,33 @@ class W3_Db extends wpdb
             
             // Perform the query via std mysql_query function..
             $this->timer_start();
-            $this->result = @mysql_query($query, $this->dbh);
-            $time_total = $this->timer_stop();
+
+			unset( $dbh );
+			if( defined( 'WP_USE_MULTIPLE_DB' ) && WP_USE_MULTIPLE_DB ) {
+				if( $this->blogs != '' && preg_match("/(" . $this->blogs . "|" . $this->users . "|" . $this->usermeta . "|" . $this->site . "|" . $this->sitemeta . "|" . $this->sitecategories . ")/i",$query) ) {
+					if( false == isset( $this->dbhglobal ) ) {
+						$this->db_connect( $query );
+					}
+					$dbh = $this->dbhglobal;
+					$this->last_db_used = "global";
+				} elseif ( preg_match("/^\\s*(alter table|create|insert|delete|update|replace) /i",$query) ) {
+					if( false == isset( $this->dbhwrite ) ) {
+						$this->db_connect( $query );
+					}
+					$dbh = $this->dbhwrite;
+					$this->last_db_used = "write";
+				} else {
+					$dbh = $this->dbh;
+					$this->last_db_used = "read";
+				}
+			} else {
+				$dbh = $this->dbh;
+				$this->last_db_used = "other/read";
+			}
+
+			$this->result = @mysql_query($query, $dbh);
+
+			$time_total = $this->timer_stop();
             
             if (defined('SAVEQUERIES') && SAVEQUERIES) {
                 $this->queries[] = array(
